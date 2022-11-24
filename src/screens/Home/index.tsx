@@ -1,15 +1,29 @@
 import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
-import { Container, Title } from "./styles";
+import { Header, Container, Title } from "./styles";
 import api from "../../services/api";
+
+import Card from "../../components/Card";
 
 export default function Home() {
   useEffect(() => {
-    api.get("/oficina").then((r) => console.log(r));
+    api
+      .get("/oficina?codigoAssociacao=601")
+      .then((r) => console.log(r.data.ListaOficinas));
   }, []);
   return (
     <Container>
-      <Title>Open up App.tsx to start working on your app!</Title>
+      <Header>
+        <Title>Bem vindo</Title>
+      </Header>
+      <Card
+        title="Consultar oficinas"
+        description="Verifique as oficinas disponíveis e tenha acesso à detalhes como e-mail, endereço, telefone, etc."
+      />
+      <Card
+        title="Indicar um amigo"
+        description="Verifique as oficinas disponíveis e tenha acesso à detalhes como e-mail, endereço, telefone, etc."
+      />
       <StatusBar style="auto" />
     </Container>
   );
