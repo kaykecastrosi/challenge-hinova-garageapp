@@ -14,6 +14,7 @@ export const Header = styled.View`
   width: 100%;
   padding-left: 20px;
   padding-top: 40px;
+  margin-bottom: 16px;
 `;
 
 export const Title = styled.Text`
