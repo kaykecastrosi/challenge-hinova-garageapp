@@ -5,11 +5,12 @@ import { AntDesign } from "@expo/vector-icons";
 interface IProps {
   title: string;
   description: string;
+  onPress: () => void;
 }
 
-const Card: React.FC<IProps> = ({ title, description }) => {
+const Card: React.FC<IProps> = ({ title, description, onPress }) => {
   return (
-    <Container>
+    <Container onPress={() => onPress()}>
       <Row>
         <Title>{title}</Title>
         <Description>{description}</Description>
@@ -21,7 +22,7 @@ const Card: React.FC<IProps> = ({ title, description }) => {
 
 const Container = styled.TouchableOpacity`
   display: flex;
-  margin: 16px;
+  margin: 8px;
   flex-direction: row;
   align-items: center;
   width: 90%;
