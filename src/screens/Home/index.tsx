@@ -21,12 +21,12 @@ export default function Home() {
       <Card
         title="Consultar oficinas"
         description="Verifique as oficinas disponíveis e tenha acesso à detalhes como e-mail, endereço, telefone, etc."
-        onPress={() => {}}
+        onPress={() => navigation.navigate("QueryGarages")}
       />
       <Card
         title="Indicar um amigo"
-        description="Verifique as oficinas disponíveis e tenha acesso à detalhes como e-mail, endereço, telefone, etc."
-        onPress={() => {}}
+        description="Indique um amigo para cadastro em uma oficina."
+        onPress={() => navigation.navigate("ReferFriend")}
       />
       <StatusBar style="auto" />
     </Container>
