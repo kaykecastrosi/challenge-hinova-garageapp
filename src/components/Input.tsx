@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components/native";
-import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { FieldError, Merge, FieldErrorsImpl } from "react-hook-form";
 import { Controller } from "react-hook-form";
@@ -70,13 +69,6 @@ const TextInput = styled.TextInput`
   display: flex;
   width: 100%;
   height: 32px;
-`;
-
-const Row = styled.View`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 `;
 
 const Title = styled.Text`
