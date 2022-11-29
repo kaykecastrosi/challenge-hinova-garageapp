@@ -12,14 +12,13 @@ interface IProps {
 
 const Garage: React.FC<IProps> = ({ name, active, item }) => {
   const navigation = useNavigation();
-
   return (
     <Container
       onPress={() => navigation.navigate("GarageDetails", { item: item })}
     >
       <Title numberOfLines={1}>{name}</Title>
       <Row>
-        <Active style={{ backgroundColor: active ? "#0BE783" : "##FE4C4C" }}>
+        <Active style={{ backgroundColor: active ? "#0BE783" : "#FE4C4C" }}>
           <ActiveText>{active ? "Ativo" : "Inativo"}</ActiveText>
         </Active>
         <AntDesign
