@@ -17,6 +17,23 @@ export interface IGarageItem {
   Ativo: boolean;
 }
 
+export interface IReferBody {
+  Indicacao: {
+    CodigoAssociacao: string;
+    DataCriacao: string;
+    CpfAssociado: string;
+    EmailAssociado: string;
+    NomeAssociado: string;
+    TelefoneAssociado: string;
+    PlacaVeiculoAssociado: string;
+    NomeAmigo: string;
+    TelefoneAmigo: string;
+    EmailAmigo: string;
+  };
+  Remetente: string;
+  Copias: [];
+}
+
 export type IGarageDetailsProps = {
   params: {
     item: IGarageItem;
