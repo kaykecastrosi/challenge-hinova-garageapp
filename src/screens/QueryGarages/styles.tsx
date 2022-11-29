@@ -17,7 +17,6 @@ export const Header = styled.View`
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 30px;
-  margin-bottom: 16px;
 `;
 
 export const HeaderOptions = styled.View`
@@ -33,6 +32,12 @@ export const Title = styled.Text`
   color: #000;
   font-size: 32px;
   font-family: "Inter_600SemiBold";
+`;
+
+export const Details = styled.ScrollView`
+  display: flex;
+  width: 100%;
+  background-color: #fafafa;
 `;
 
 export const LoadingIndicator = styled.ActivityIndicator`

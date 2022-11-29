@@ -6,6 +6,7 @@ import {
   Container,
   Title,
   LoadingIndicator,
+  Details,
 } from "./styles";
 import api from "../../services/api";
 import { useNavigation } from "@react-navigation/native";
@@ -54,11 +55,17 @@ export default function QueryGarages() {
       {loading ? (
         <LoadingIndicator size={64} color="black" />
       ) : (
-        <>
+        <Details
+          contentContainerStyle={{
+            display: "flex",
+            alignItems: "center",
+            padding: 20,
+          }}
+        >
           {garages.map((item, index) => (
             <Garage key={index} name={item.Nome} active={true} item={item} />
           ))}
-        </>
+        </Details>
       )}
       <StatusBar style="auto" />
     </Container>
