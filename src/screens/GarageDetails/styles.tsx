@@ -29,11 +29,15 @@ export const HeaderOptions = styled.View`
   margin-bottom: 16px;
 `;
 
+export const Details = styled.ScrollView`
+  display: flex;
+  width: 100%;
+  background-color: #fafafa;
+`;
+
 export const Title = styled.Text`
   color: #000;
   align-self: flex-start;
-  padding-left: 20px;
-  padding-right: 20px;
   font-size: 32px;
   font-family: "Inter_600SemiBold";
 `;
@@ -41,16 +45,30 @@ export const Title = styled.Text`
 export const Description = styled.Text`
   color: #000;
   align-self: flex-start;
-  padding-left: 20px;
-  padding-right: 20px;
   font-size: 16px;
   text-align: left;
   font-family: "Inter_400Regular";
 `;
 
+export const Row = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const Address = styled.TouchableOpacity`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  justify-content: center;
+  align-self: flex-start;
+`;
+
 export const Image = styled.Image`
   display: flex;
-  width: 90%;
+  width: 100%;
   border-radius: 16px;
   border: 2px solid #000;
   height: 128px;
