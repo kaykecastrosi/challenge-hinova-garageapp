@@ -49,7 +49,7 @@ export default function QueryGarages() {
             color="black"
           />
         </HeaderOptions>
-        <Title>Consultar oficinas</Title>
+        <Title>Oficinas Disponíveis</Title>
       </Header>
       {loading ? (
         <LoadingIndicator size={64} color="black" />
