@@ -19,7 +19,7 @@ export interface IGarageItem {
 
 export interface IReferBody {
   Indicacao: {
-    CodigoAssociacao: string;
+    CodigoAssociacao: number;
     DataCriacao: string;
     CpfAssociado: string;
     EmailAssociado: string;
@@ -29,6 +29,7 @@ export interface IReferBody {
     NomeAmigo: string;
     TelefoneAmigo: string;
     EmailAmigo: string;
+    Observacao: string | null;
   };
   Remetente: string;
   Copias: [];
