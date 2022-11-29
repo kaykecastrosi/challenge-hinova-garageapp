@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { Header, HeaderOptions, Container, Title, Details } from "./styles";
 import api from "../../services/api";
@@ -68,8 +68,14 @@ export default function QueryGarages() {
         Copias: [],
       })
       .then((r) => {
-        console.log(r.data);
-        setLoading(false);
+        if (r.data.Sucesso !== null) {
+          console.log(r.data);
+          setLoading(false);
+          navigation.reset({
+            index: 0,
+            routes: [{ name: "Success" }],
+          });
+        }
       });
   };
 
