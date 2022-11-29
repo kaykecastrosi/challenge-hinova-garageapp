@@ -1,16 +1,22 @@
 import React from "react";
 import styled from "styled-components/native";
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { IGarageItem } from "../../global";
 
 interface IProps {
-  name: string;
+  name: string | null;
   active: boolean;
-  onPress: () => void;
+  item: IGarageItem;
 }
 
-const Garage: React.FC<IProps> = ({ name, active, onPress }) => {
+const Garage: React.FC<IProps> = ({ name, active, item }) => {
+  const navigation = useNavigation();
+
   return (
-    <Container onPress={() => onPress()}>
+    <Container
+      onPress={() => navigation.navigate("GarageDetails", { item: item })}
+    >
       <Title numberOfLines={1}>{name}</Title>
       <Row>
         <Active style={{ backgroundColor: active ? "#0BE783" : "##FE4C4C" }}>
