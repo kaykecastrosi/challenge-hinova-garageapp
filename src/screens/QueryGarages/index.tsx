@@ -13,14 +13,12 @@ import { AntDesign } from "@expo/vector-icons";
 
 import Garage from "../../components/Garage";
 
-export interface IGarage {
-  Nome: string;
-}
+import { IGarageItem } from "../../../global";
 
 export default function QueryGarages() {
   const [loading, setLoading] = useState(true);
 
-  const [garages, setGarages] = useState<IGarage[]>([]);
+  const [garages, setGarages] = useState<IGarageItem[]>([]);
   useEffect(() => {
     api.get("/oficina?codigoAssociacao=601").then((r) => {
       if (r.data.RetornoErro.retornErro !== true) {
@@ -58,12 +56,7 @@ export default function QueryGarages() {
       ) : (
         <>
           {garages.map((item, index) => (
-            <Garage
-              key={index}
-              name={item.Nome}
-              active={true}
-              onPress={() => {}}
-            />
+            <Garage key={index} name={item.Nome} active={true} item={item} />
           ))}
         </>
       )}
