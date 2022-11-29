@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { Header, HeaderOptions, Container, Title, Image } from "./styles";
+import {
+  Header,
+  HeaderOptions,
+  Container,
+  Title,
+  Image,
+  Description,
+} from "./styles";
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
 import { IGarageDetailsProps } from "../../../global";
@@ -30,10 +37,10 @@ export default function GarageDetails() {
             color="black"
           />
         </HeaderOptions>
-        <Title>{item.Nome}</Title>
-        <Image source={{ uri: `data:image/png;base64, ${item.Foto}` }} />
       </Header>
-
+      <Image source={{ uri: `data:image/png;base64, ${item.Foto}` }} />
+      <Title>{item.Nome}</Title>
+      <Description>{item.Descricao?.split("\\n").join("\n")}</Description>
       <StatusBar style="auto" />
     </Container>
   );

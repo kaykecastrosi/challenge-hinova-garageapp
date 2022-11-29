@@ -31,12 +31,28 @@ export const HeaderOptions = styled.View`
 
 export const Title = styled.Text`
   color: #000;
+  align-self: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 32px;
   font-family: "Inter_600SemiBold";
 `;
 
+export const Description = styled.Text`
+  color: #000;
+  align-self: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  text-align: left;
+  font-family: "Inter_400Regular";
+`;
+
 export const Image = styled.Image`
   display: flex;
-  width: 100%;
+  width: 90%;
+  border-radius: 16px;
+  border: 2px solid #000;
   height: 128px;
+  margin-bottom: 16px;
 `;
