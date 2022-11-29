@@ -5,7 +5,7 @@ export interface IGarageItem {
   Nome: string | null;
   Descricao: string | null;
   DescricaoCurta: string | null;
-  Endereço: string | null;
+  Endereco: string | null;
   Latitude: string | null;
   Longitude: string | null;
   Foto: string | null;
