@@ -20,6 +20,12 @@ export const Header = styled.View`
   margin-bottom: 16px;
 `;
 
+export const Details = styled.ScrollView`
+  display: flex;
+  width: 100%;
+  background-color: #fafafa;
+`;
+
 export const HeaderOptions = styled.View`
   display: flex;
   flex-direction: row;
