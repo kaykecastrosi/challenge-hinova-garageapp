@@ -35,7 +35,8 @@ export const Title = styled.Text`
   font-family: "Inter_600SemiBold";
 `;
 
-export const LoadingIndicator = styled.ActivityIndicator`
-  position: absolute;
-  top: 50%;
+export const Image = styled.Image`
+  display: flex;
+  width: 100%;
+  height: 128px;
 `;

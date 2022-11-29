@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import {
-  Header,
-  HeaderOptions,
-  Container,
-  Title,
-  LoadingIndicator,
-} from "./styles";
-import api from "../../services/api";
-import { useNavigation } from "@react-navigation/native";
+import { Header, HeaderOptions, Container, Title, Image } from "./styles";
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
-
-export interface IGarage {
-  Nome: string;
-}
+import { IGarageDetailsProps } from "../../../global";
 
 export default function GarageDetails() {
-  const [loading, setLoading] = useState(true);
-
   const navigation = useNavigation();
+  const route = useRoute<RouteProp<IGarageDetailsProps>>();
+
+  const item = route.params.item;
 
   return (
     <Container>
@@ -39,9 +30,10 @@ export default function GarageDetails() {
             color="black"
           />
         </HeaderOptions>
-        <Title>Consultar oficinas</Title>
+        <Title>{item.Nome}</Title>
+        <Image source={{ uri: `data:image/png;base64, ${item.Foto}` }} />
       </Header>
-      {loading ? <LoadingIndicator size={64} color="black" /> : <></>}
+
       <StatusBar style="auto" />
     </Container>
   );
