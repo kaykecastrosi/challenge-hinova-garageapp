@@ -50,6 +50,7 @@ declare global {
         item: IGarageItem;
       };
       ReferFriend: NavigatorScreenParams;
+      Success: NavigatorScreenParams;
     }
   }
 }
