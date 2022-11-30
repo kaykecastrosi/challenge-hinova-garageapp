@@ -1,7 +1,6 @@
 # Hinova Garage
 
-<img src="./readme/icon.png" align="left"
-width="280" hspace="10" vspace="10">
+![Icon](readme/Icon.png)
 
 Hinova Garage is a intuitive and minimalist app to query garages next to you.
 
@@ -17,24 +16,11 @@ And must have another screen where you can refer a friend filling a form.
 
 ## Preview
 
-<img src="./readme/App.gif"
-width="200"
-    hspace="10" vspace="10">
+![Preview](readme/App.gif)
 
 ## Screenshots
 
-<img src="./readme/Home.png" align="left"
-width="200"
-    hspace="10" vspace="10">
-<img src="./readme/QueryGarages.png" align="center"
-width="200"
-    hspace="10" vspace="10">
-<img src="./readme/GarageDetails.png" align="center"
-width="200"
-    hspace="10" vspace="10">
-<img src="./readme/ReferFriend.png" align="center"
-width="200"
-    hspace="10" vspace="10">
+![Home](readme/Home.png) ![QueryGarages](readme/QueryGarages.png) ![GarageDetails](readme/GarageDetails.png) ![ReferFriend](readme/ReferFriend.png)
 
 ## Run the app
 
